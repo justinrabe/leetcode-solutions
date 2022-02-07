@@ -12,9 +12,8 @@ var countGoodRectangles = function(rectangles) {
     }
     console.log(maxLen)
     for (var i = 0; i < rectangles.length; i++) {
-        if (Math.min(rectangles[i][0], rectangles[i][1]) >= maxLen) {
+        if (Math.min(rectangles[i][0], rectangles[i][1]) >= maxLen)
           total++;
-        }
     }
     return total;
 };

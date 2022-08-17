@@ -7,10 +7,7 @@ public class Solution {
             {
                 StringBuilder sb = new StringBuilder();
                 foreach (char c in word)
-                {
-                    int index = (int)c % 32 - 1;
-                    sb.Append(morse[index]);
-                }
+                    sb.Append(morse[(int)c % 32 - 1]);
                 s.Add(sb.ToString());
             }
             return s.Count;

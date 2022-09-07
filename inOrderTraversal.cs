@@ -13,3 +13,21 @@ public class Solution {
         }
     }
 }
+
+public class Solution {
+    public IList<int> InorderTraversal(TreeNode root) {
+        List<int> n = new List<int>();
+        Stack<TreeNode> s = new Stack<TreeNode>();
+        TreeNode curr = root;
+        while (curr != null || s.Count > 0) {
+            while (curr != null) {
+                s.Push(curr);
+                curr = curr.left;
+            }
+            curr = s.Pop();
+            n.Add(curr.val);
+            curr = curr.right;
+        }
+        return n;
+    }
+}

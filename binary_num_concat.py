@@ -1,6 +1,6 @@
 class Solution:
     def concatenatedBinary(self, n: int) -> int:
-        modulo = 10**9 + 7
+        modulo = 10**9 +7
         res = 0
         for x in range(n):
             y = (1 << (len(bin(x+1)) - 2))
